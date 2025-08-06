@@ -1,7 +1,7 @@
 import requests
 import logging
 from typing import List, Dict
-from .config import BCRA_API_TOKEN
+from config import BCRA_API_TOKEN
 
 logger = logging.getLogger(__name__)
 
