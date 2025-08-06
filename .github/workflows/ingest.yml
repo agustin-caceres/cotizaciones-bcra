@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Ejecutar carga incremental
-        run: python -m cotizaciones_bcra.main --modo incremental
+        run: python cotizaciones_bcra.main --modo incremental
