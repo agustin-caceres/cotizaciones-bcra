@@ -1,8 +1,8 @@
 import argparse
 import logging
-from .client import BcraClient
-from .repository import get_latest_date, insert_cotizaciones
-from .utils import normalizar_datos
+from client import BcraClient
+from repository import get_latest_date, insert_cotizaciones
+from utils import normalizar_datos
 
 # Configuración básica de logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
