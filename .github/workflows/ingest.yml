@@ -1,0 +1,29 @@
+name: Ingesta semanal BCRA
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'  # Lunes a las 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      BCRA_API_TOKEN: ${{ secrets.BCRA_API_TOKEN }}
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Setup de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+
+      - name: Ejecutar carga incremental
+        run: python -m cotizaciones_bcra.main --modo incremental
