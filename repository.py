@@ -1,6 +1,6 @@
 import logging
 from sqlalchemy import create_engine, text
-from .config import DATABASE_URL
+from config import DATABASE_URL
 
 logger = logging.getLogger(__name__)
 
