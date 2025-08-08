@@ -1,4 +1,4 @@
-# Documentación Técnica — Ejercicio 2: Ingesta de Cotizaciones del BCRA
+# Documentación Técnica - Ingesta de Cotizaciones del BCRA
 
 ## 1. Cómo fue construida la ingesta incremental
 
@@ -59,5 +59,3 @@ No hay nuevas cotizaciones para insertar.
 * Las credenciales se almacenan como **Secrets** (`DATABASE_URL`, `BCRA_API_TOKEN`) en el repositorio de GitHub y no se publican por motivos de seguridad.
 
 ---
-
-Con esto se cumple la consigna del Ejercicio 2: carga histórica, ingesta incremental semanal y documentación completa.
